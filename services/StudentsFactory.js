@@ -5,6 +5,5 @@ studentRoster.factory('StudentsFactory', function StudentsFactory(){
         factory.students.push({ name: factory.studentName, id: factory.students.length + 1, attendance: false });
         factory.studentName = null;
     };
-
     return factory;
 });

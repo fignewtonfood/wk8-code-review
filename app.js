@@ -5,13 +5,11 @@ studentRoster.config(function($stateProvider, $urlRouterProvider){
         url: "",
         templateUrl: "partials/home.html"
     });
-
     $stateProvider.state('students', {
         url: "/students",
         templateUrl: "partials/students.html",
         controller: "StudentsCtrl"
     });
-
     $stateProvider.state('teacher', {
         url:"/teacher",
         templateUrl: "partials/teacher.html",
