@@ -4,7 +4,6 @@ studentRoster.controller('AttendanceCtrl', function AttendanceCtrl($scope, Stude
     $scope.addStudentIsPresent = function(student) {
         student.attendance = true;
     };
-
     $scope.addStudentIsGone = function(student) {
         student.attendance = false;
     };

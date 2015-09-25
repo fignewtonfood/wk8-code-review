@@ -8,13 +8,36 @@
     </form>
 </div>
 
-<div ng-show="students.length">
+<div class="row attendance">
+    <div class="col-md-6" ng-show="studentsNotHere.length">
+        <h3>Students Not Here</h3>
+        <ul>
+            <li ng-repeat="item in studentsNotHere = (students | filter:{attendance: false})">
+                {{item.name}}
+            </li>
+        </ul>
+    </div> <!-- end col-md-6 -->
+    <div class="col-md-6" ng-show="studentsHere.length">
+        <h3>Students Here</h3>
+        <ul>
+            <li ng-repeat="item in studentsHere = (students | filter:{attendance: true})">
+                {{item.name}}
+            </li>
+        </ul>
+    </div> <!-- end col-md-6 -->
+</div> <!-- end row permission --> <!-- end FieldTripsCtrl -->
+
+
+
+
+
+<!-- <div ng-show="students.length">
     <h1>Here are all of your students:</h1>
     <ul>
         <li ng-repeat="item in students">
             {{ item.name }}
         </li>
     </ul>
-</div>
+</div> -->
 
 <a ui-sref="home"><button type="button" class="btn">Go to Home</button></a>
