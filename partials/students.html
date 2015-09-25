@@ -1,17 +1,21 @@
 <div ng-show="students.length">
     <h1>Sign-in</h1>
     <ul>
-        <li ng-repeat="item in students">
-            {{ item.name }} <br>
-            <div class="row attendance" ng-controller="AttendanceCtrl">
-                <div ng-hide="item.attendance">
-                    <a ng-click="addStudentIsPresent(item)"> - I'm here</a>
-                </div>
-                <div ng-hide="!item.attendance">
-                    <a ng-click="addStudentIsGone(item)"> - I'm gone</a>
-                </div>
-            </div>
-        </li>
+        <table>
+            <tr ng-repeat="item in students">
+                <td>{{ item.name }}</td>
+                <td>
+                    <div class="container" ng-controller="AttendanceCtrl">
+                        <div ng-hide="item.attendance">
+                            <button type="button" ng-click="addStudentIsPresent(item)" class="btn btn-success">I'm here</button>
+                        </div>
+                        <div ng-hide="!item.attendance">
+                            <button type="button" ng-click="addStudentIsGone(item)" class="btn btn-warning">I'm gone</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </ul>
 </div>
 
