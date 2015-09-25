@@ -9,8 +9,8 @@
 </div> <!-- end col-md-12 -->
 
 <div class="container">
-    <div class="row attendance">
-        <div class="col-md-6" ng-show="studentsNotHere.length">
+    <div class="row">
+        <div class="col-md-6" id="nothere" ng-show="studentsNotHere.length">
             <h3>Students Not Here</h3>
             <ul>
                 <li ng-repeat="item in studentsNotHere = (students | filter:{attendance: false})">
@@ -18,7 +18,7 @@
                 </li>
             </ul>
         </div> <!-- end col-md-6 -->
-        <div class="col-md-6" ng-show="studentsHere.length">
+        <div class="col-md-6" id="here" ng-show="studentsHere.length">
             <h3>Students Here</h3>
             <ul>
                 <li ng-repeat="item in studentsHere = (students | filter:{attendance: true})">
