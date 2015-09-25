@@ -7,3 +7,12 @@
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
 </div>
+
+<div ng-show="students.length">
+    <h1>Here are all of your students:</h1>
+    <ul>
+        <li ng-repeat="item in students">
+            {{ item.name }}
+        </li>
+    </ul>
+</div>
