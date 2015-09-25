@@ -1,6 +1,7 @@
 var studentRoster = angular.module('studentRoster', ['ui.router']);
 
 studentRoster.config(function($stateProvider, $urlRouterProvider){
+    // routing
     $stateProvider.state('home', {
         url: "",
         templateUrl: "partials/home.html"
