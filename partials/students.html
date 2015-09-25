@@ -3,9 +3,14 @@
     <ul>
         <li ng-repeat="item in students">
             {{ item.name }} <br>
-                <div ng-controller="AttendanceCtrl">
-
+            <div class="row attendance" ng-controller="AttendanceCtrl">
+                <div ng-hide="item.attendance">
+                    <a ng-click="addStudentIsPresent(item)"> - I'm here</a>
                 </div>
+                <div ng-hide="!item.attendance">
+                    <a ng-click="addStudentIsGone(item)"> - I'm gone</a>
+                </div>
+            </div>
         </li>
     </ul>
 </div>
